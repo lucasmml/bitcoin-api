@@ -1,6 +1,6 @@
 # Bitcoin Restful API with proper automated API documentation
 
-##### Project cloned from [https://github.com/AtulRanjan/spring-boot2-example](https://github.com/AtulRanjan/spring-boot2-example "https://github.com/AtulRanjan/spring-boot2-example") 
+##### Project cloned and modified from [https://github.com/AtulRanjan/spring-boot2-example](https://github.com/AtulRanjan/spring-boot2-example "https://github.com/AtulRanjan/spring-boot2-example") 
 
 ## Build Project
 
