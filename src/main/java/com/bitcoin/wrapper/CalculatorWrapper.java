@@ -17,23 +17,23 @@ public class CalculatorWrapper {
 	}
 	
 	public Double calculateAverage(List<Double> doubleValues) {
-		Double[] doubleNumbers = doubleValues.toArray(new Double[doubleValues.size()]);
-		double[] primitiveDoubleNumbers = ArrayUtils.toPrimitive(doubleNumbers);
-		DescriptiveStatistics statistics = new DescriptiveStatistics(primitiveDoubleNumbers);
+		DescriptiveStatistics statistics = getDescriptiveStatistics(doubleValues);
 		return statistics.getMean();
 	}
 
 	public Double calculateMedian(List<Double> doubleValues) {
-		Double[] doubleNumbers = doubleValues.toArray(new Double[doubleValues.size()]);
-		double[] primitiveDoubleNumbers = ArrayUtils.toPrimitive(doubleNumbers);
-		DescriptiveStatistics statistics = new DescriptiveStatistics(primitiveDoubleNumbers);
+		DescriptiveStatistics statistics = getDescriptiveStatistics(doubleValues);
 		return statistics.getPercentile(new Double("50"));
 	}
 
 	public Double calculateDeviation(List<Double> doubleValues) {
+		DescriptiveStatistics statistics = getDescriptiveStatistics(doubleValues);
+		return statistics.getStandardDeviation();
+	}
+
+	private DescriptiveStatistics getDescriptiveStatistics(List<Double> doubleValues) {
 		Double[] doubleNumbers = doubleValues.toArray(new Double[doubleValues.size()]);
 		double[] primitiveDoubleNumbers = ArrayUtils.toPrimitive(doubleNumbers);
-		DescriptiveStatistics statistics = new DescriptiveStatistics(primitiveDoubleNumbers);
-		return statistics.getStandardDeviation();
+		return new DescriptiveStatistics(primitiveDoubleNumbers);
 	}
 }
