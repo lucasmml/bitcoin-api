@@ -1,0 +1,621 @@
+:title-logo-image: images/cover.jpg
+
+= Bitcoin API
+
+
+[[_overview]]
+== Overview
+A rest API with Spring Boot 2!
+
+
+=== Version information
+[%hardbreaks]
+__Version__ : 0.1
+
+
+=== URI scheme
+[%hardbreaks]
+
+
+
+
+=== Tags
+
+* bitcoin-api-controller : Bitcoin API Controller
+
+
+
+
+[[_paths]]
+== Resources
+
+[[_bitcoin-api-controller_resource]]
+=== Bitcoin-api-controller
+Bitcoin API Controller
+
+
+[[_getjsonusingget]]
+==== getJson
+....
+GET /exercicie1/json
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|string
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/exercicie1/json
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+"string"
+----
+
+
+[[_purchaseaverageusingget]]
+==== purchaseAverage
+....
+GET /exercicie2/purchase-average
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|number (double)
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/exercicie2/purchase-average
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+0.0
+----
+
+
+[[_purchasedeviationusingget]]
+==== purchaseDeviation
+....
+GET /exercicie2/purchase-deviation
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|number (double)
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/exercicie2/purchase-deviation
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+0.0
+----
+
+
+[[_purchasemedianusingget]]
+==== purchaseMedian
+....
+GET /exercicie2/purchase-median
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|number (double)
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/exercicie2/purchase-median
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+0.0
+----
+
+
+[[_salesaverageusingget]]
+==== salesAverage
+....
+GET /exercicie2/sales-average
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|number (double)
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/exercicie2/sales-average
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+0.0
+----
+
+
+[[_salesdeviationusingget]]
+==== salesDeviation
+....
+GET /exercicie2/sales-deviation
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|number (double)
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/exercicie2/sales-deviation
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+0.0
+----
+
+
+[[_salesmedianusingget]]
+==== salesMedian
+....
+GET /exercicie2/sales-median
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|number (double)
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/exercicie2/sales-median
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+0.0
+----
+
+
+[[_top5purchaseusingget]]
+==== top5Purchase
+....
+GET /exercicie2/top-5-purchase
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< number (double) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/exercicie2/top-5-purchase
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ 0.0 ]
+----
+
+
+[[_top5salesusingget]]
+==== top5Sales
+....
+GET /exercicie2/top-5-sales
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< number (double) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/exercicie2/top-5-sales
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ 0.0 ]
+----
+
+
+[[_buytransfersusingget]]
+==== buyTransfers
+....
+GET /extra/buy-prices
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< number (double) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/extra/buy-prices
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ 0.0 ]
+----
+
+
+[[_transferspricesofsellusingget]]
+==== transfersPricesOfSell
+....
+GET /extra/sell-prices
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< number (double) > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/extra/sell-prices
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ 0.0 ]
+----
+
+
+[[_transfersusingget]]
+==== transfers
+....
+GET /extra/transfers
+....
+
+
+===== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< <<_mercadobitcoindto,MercadoBitcoinDTO>> > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+
+
+
+
+
+
+
+
+
+
+===== Example HTTP request
+
+====== Request path
+----
+/extra/transfers
+----
+
+
+===== Example HTTP response
+
+====== Response 200
+[source,json]
+----
+[ {
+  "amount" : 0.0,
+  "date" : "string",
+  "price" : 0.0,
+  "tid" : 0,
+  "type" : "string"
+} ]
+----
+
+
+
+
+[[_definitions]]
+== Definitions
+
+[[_mercadobitcoindto]]
+=== MercadoBitcoinDTO
+
+[options="header", cols=".^3,.^11,.^4"]
+|===
+|Name|Description|Schema
+|**amount** +
+__optional__|**Example** : `0.0`|number (double)
+|**date** +
+__optional__|**Example** : `"string"`|string (date-time)
+|**price** +
+__optional__|**Example** : `0.0`|number (double)
+|**tid** +
+__optional__|**Example** : `0`|integer (int32)
+|**type** +
+__optional__|**Example** : `"string"`|string
+|===
+
+
+
+
+
