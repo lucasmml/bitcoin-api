@@ -17,6 +17,23 @@ Click on the link to access the swagger ui.
 
 [Swagger-UI](http://localhost:7772/spring-boot2/swagger-ui.html "Swagger-UI") http://localhost:7772/spring-boot2/swagger-ui.html
 
+##### Testing the API using browser
+Configure your nginx by the file below
+
+[nginx.conf](https://github.com/lucasmml/bitcoin-api/tree/master/src/main/resources/nginx.conf "nginx.conf")
+
+or map this contexts in apache:
+
+        location / {
+            proxy_pass http://localhost:3000;
+        }
+
+        location /bitcoin-api/ {
+			proxy_pass http://localhost:7772/spring-boot2/;
+		}
+
+And access browser using this URL [http://localhost/](http://localhost/ "http://localhost/")
+
 ### Creating static API Documentation
 To create static document in pdf and html format, Run following command
 
