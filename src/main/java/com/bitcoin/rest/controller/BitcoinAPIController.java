@@ -30,34 +30,47 @@ public class BitcoinAPIController {
 
 		Map<String, Object> map = new HashMap<String, Object>();
 
-		List<Double> topFiveSales = calculatorService.calculateTop5HighestValues(salesPrice);
-		List<Double> topFivePurchase = calculatorService.calculateTop5HighestValues(purchasePrices);
-
-		map.put("top_5_sales", topFiveSales);
-		map.put("top_5_purchase", topFivePurchase);
-
-		Double salesAverage = calculatorService.calculateAverage(salesPrice);
-		Double purshaceAverage = calculatorService.calculateAverage(purchasePrices);
-
-		map.put("sales_average", salesAverage);
-		map.put("purchase_average", purshaceAverage);
-
-		Double salesMedian = calculatorService.calculateMedian(salesPrice);
-		Double purchaseMedian = calculatorService.calculateMedian(purchasePrices);
-
-		map.put("sales_median", salesMedian);
-		map.put("purchase_median", purchaseMedian);
-
-		Double salesDeviation = calculatorService.calculateDeviation(salesPrice);
-		Double purchaseDeviation = calculatorService.calculateDeviation(purchasePrices);
-
-		map.put("sales_deviation", salesDeviation);
-		map.put("purchase_deviation", purchaseDeviation);
+		getTop5(salesPrice, purchasePrices, map);
+		getAverage(salesPrice, purchasePrices, map);
+		getMedian(salesPrice, purchasePrices, map);
+		getDeviation(salesPrice, purchasePrices, map);
 
 		Gson gson = new Gson(); 
 		String json = gson.toJson(map); 
 		
 		return ResponseEntity.ok(json);
+	}
+
+	private void getTop5(List<Double> salesPrice, List<Double> purchasePrices, Map<String, Object> map) {
+		List<Double> topFiveSales = calculatorService.calculateTop5HighestValues(salesPrice);
+		List<Double> topFivePurchase = calculatorService.calculateTop5HighestValues(purchasePrices);
+
+		map.put("top_5_sales", topFiveSales);
+		map.put("top_5_purchase", topFivePurchase);
+	}
+
+	private void getDeviation(List<Double> salesPrice, List<Double> purchasePrices, Map<String, Object> map) {
+		Double salesDeviation = calculatorService.calculateDeviation(salesPrice);
+		Double purchaseDeviation = calculatorService.calculateDeviation(purchasePrices);
+
+		map.put("sales_deviation", salesDeviation);
+		map.put("purchase_deviation", purchaseDeviation);
+	}
+
+	private void getMedian(List<Double> salesPrice, List<Double> purchasePrices, Map<String, Object> map) {
+		Double salesMedian = calculatorService.calculateMedian(salesPrice);
+		Double purchaseMedian = calculatorService.calculateMedian(purchasePrices);
+
+		map.put("sales_median", salesMedian);
+		map.put("purchase_median", purchaseMedian);
+	}
+
+	private void getAverage(List<Double> salesPrice, List<Double> purchasePrices, Map<String, Object> map) {
+		Double salesAverage = calculatorService.calculateAverage(salesPrice);
+		Double purshaceAverage = calculatorService.calculateAverage(purchasePrices);
+
+		map.put("sales_average", salesAverage);
+		map.put("purchase_average", purshaceAverage);
 	}
 
 	@GetMapping("exercicie2/top-5-sales")
