@@ -17,7 +17,7 @@ Click on the link to access the swagger ui.
 
 [Swagger-UI](http://localhost:7772/spring-boot2/swagger-ui.html "Swagger-UI") http://localhost:7772/spring-boot2/swagger-ui.html
 
-##### Testing the API using browser
+##### Testing the API using UI
 Configure your nginx by the file below
 
 [nginx.conf](https://github.com/lucasmml/bitcoin-api/tree/master/src/main/resources/nginx.conf "nginx.conf")
