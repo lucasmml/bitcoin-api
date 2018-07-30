@@ -32,7 +32,7 @@ Three files will be created in **\src\main\resources\asciidoc** directory
 
 
 * PDF Sample : 
-[Generated pdf document](https://github.com/AtulRanjan/spring-boot2/tree/master/src/main/resources/asciidoc/api-doc.pdf "Generated pdf document") 
+[Generated pdf document](https://github.com/lucasmml/bitcoin-api/tree/master/src/main/resources/asciidoc/api-doc.pdf "Generated pdf document") 
 
 
-* HTML Sample : [Generated html document](https://github.com/AtulRanjan/spring-boot2/tree/master/src/main/resources/asciidoc/api-doc.html "Generated html document") | [Preview](http://htmlpreview.github.io/?https://github.com/AtulRanjan/spring-boot2/blob/master/src/main/resources/asciidoc/api-doc.html "View doc")
+* HTML Sample : [Generated html document](https://github.com/lucasmml/bitcoin-api/tree/master/src/main/resources/asciidoc/api-doc.html "Generated html document") | [Preview](http://htmlpreview.github.io/?https://github.com/lucasmml/bitcoin-api/blob/master/src/main/resources/asciidoc/api-doc.html "View doc")
